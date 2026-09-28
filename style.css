@@ -2044,12 +2044,16 @@ footer {
 
     .hero-portrait-scene {
         position: absolute;
-        top: clamp(165px, 23vh, 205px);
+        top: 135px;
         right: 25px;
         align-self: auto;
         width: clamp(110px, 28vw, 190px);
         margin: 0;
         transform: none;
+    }
+
+    .hero-portrait {
+        clip-path: circle(50% at 50% 50%);
     }
 
 
