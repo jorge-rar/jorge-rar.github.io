@@ -26,26 +26,36 @@
 
             <nav id="main-navigation">
                 <a href="#about">About</a>
-                <a href="#experience">Experience</a>
                 <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#certifications">Certifications</a>
                 <a href="#contact">Contact</a>
             </nav>
 
-            <button
-                class="mobile-menu-button"
-                type="button"
-                aria-expanded="false"
-                aria-controls="main-navigation"
-                aria-label="Open navigation menu"
-            >
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="nav-actions">
+                <button
+                    class="feedback-button"
+                    type="button"
+                    disabled
+                    data-feedback-form
+                    aria-label="Feedback form coming soon"
+                    title="Google Form link will be added later"
+                >
+                    Feedback
+                </button>
 
-            <div class="system-status">
-                <span class="status-dot"></span>
-                SYSTEM.STATUS // ONLINE
+                <button
+                    class="mobile-menu-button"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="main-navigation"
+                    aria-label="Open navigation menu"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
 
         </div>
@@ -92,15 +102,40 @@
                 </h1>
 
 
-                <div class="hero-role" aria-live="polite" aria-atomic="true">
+                <div class="hero-role">
 
-                    <span class="terminal-symbol">&gt;</span>
+                    <button
+                        class="hero-role-toggle"
+                        id="hero-role-toggle"
+                        type="button"
+                        aria-label="Pause job title animation"
+                        aria-controls="typing-text"
+                        title="Pause job title animation"
+                        disabled
+                    >
+                        <svg class="role-toggle-pause" viewBox="0 0 12 12" aria-hidden="true" focusable="false">
+                            <path d="M3 2h2v8H3zM7 2h2v8H7z" />
+                        </svg>
+                        <svg class="role-toggle-play" viewBox="0 0 12 12" aria-hidden="true" focusable="false">
+                            <path d="M3 1.5v9l7-4.5z" />
+                        </svg>
+                    </button>
 
-                    <span id="typing-text" role="status" aria-live="polite" aria-atomic="true"></span>
+                    <span class="terminal-symbol" aria-hidden="true">&gt;</span>
+
+                    <span id="typing-text" aria-hidden="true">Continuous Improvement Engineer</span>
 
                     <span class="cursor" aria-hidden="true">_</span>
 
                 </div>
+
+
+                <span class="sr-only">Industrial Engineer focused on continuous improvement and project delivery.</span>
+
+
+                <p class="hero-summary">
+                    Industrial Engineer with 3+ years of experience across the automotive and construction industries. I use MES for production planning and control, SAP for shop-floor management, MS Project for cost, scope and schedule control, and CAD tools for technical reviews.
+                </p>
 
 
                 <div class="hero-location">
@@ -175,72 +210,23 @@
             </div>
 
 
-            <!-- =========================
-                 INDUSTRIAL PROCESS GRAPHIC
-            ========================== -->
-
-            <div class="process-graphic">
-
-                <div class="process-label">
-                    PRODUCTION LINE JR-99 // PROJECT BETA
+            <div class="hero-portrait-scene">
+                <svg class="portrait-drawing" viewBox="0 0 440 440" aria-hidden="true" focusable="false">
+                    <circle class="portrait-orbit portrait-orbit-main" cx="220" cy="220" r="158" />
+                    <circle class="portrait-orbit portrait-orbit-fine" cx="220" cy="220" r="183" />
+                    <path class="portrait-guide" d="M220 10v56m0 308v56M10 220h56m308 0h56M72 72l38 38m220 220 38 38M368 72l-38 38M110 330l-38 38" />
+                    <path class="portrait-signal" d="M220 37a183 183 0 0 1 183 183" />
+                    <circle class="portrait-contact" cx="403" cy="220" r="3" />
+                    <circle class="portrait-contact" cx="72" cy="368" r="3" />
+                </svg>
+                <div class="portrait-window">
+                    <img
+                        class="hero-portrait"
+                        src="assets/jorge-portrait-cutout.png"
+                        alt="Portrait of Jorge Ribeiro"
+                        fetchpriority="high"
+                    >
                 </div>
-
-
-                <div class="process-system">
-
-                    <div class="process-node node-1">
-                        <span></span>
-                    </div>
-
-                    <div class="process-line line-1"></div>
-
-
-                    <div class="process-node node-2">
-                        <span></span>
-                    </div>
-
-                    <div class="process-line line-2"></div>
-
-
-                    <div class="process-node node-3">
-                        <span></span>
-                    </div>
-
-
-                    <div class="process-branch"></div>
-
-
-                    <div class="process-node node-4">
-                        <span></span>
-                    </div>
-
-
-                    <div class="process-line line-3"></div>
-
-
-                    <div class="process-node node-5">
-                        <span></span>
-                    </div>
-
-                </div>
-
-
-                <div class="process-data">
-
-                    <span>
-                        OEE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / 92.8%
-                    </span>
-
-                    <span>
-                        THROUGHPUT&nbsp; / 97.4%
-                    </span>
-
-                    <span>
-                        SCRAP RATE&nbsp;&nbsp; / 1.6%
-                    </span>
-
-                </div>
-
             </div>
 
 
@@ -267,59 +253,132 @@
              ABOUT
         ========================== -->
 
-        <section id="about" class="section">
-
-            <div class="section-header">
-
-                <span class="section-number">
-                    01
-                </span>
-
-                <span class="section-title">
-                    ABOUT
-                </span>
-
-            </div>
-
+        <section id="about" class="section about-section">
 
             <div class="about-content">
 
-                <div class="about-heading">
-
-                    <h2>
-                        Engineering<br>
-                        <span>with purpose.</span>
+                <header class="about-heading">
+                    <h2 class="about-title">
+                        <span>About</span>
                     </h2>
+                </header>
+
+                <div class="about-intro">
+                    <p>
+                        Industrial Engineer with 3+ years across automotive and
+                        construction, specializing in manufacturing processes and
+                        planning, data analysis, visualization and reporting,
+                        technical drawing review, and construction project
+                        leadership.
+                    </p>
+                    <p>
+                        Across fast-paced environments, I’ve contributed to
+                        critical projects that required meeting output targets
+                        and schedules while assessing requirements. I also pursue
+                        online courses and certifications to build skills that
+                        complement my experience.
+                    </p>
+                </div>
+
+                <div class="about-detail-rule" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+
+                <div class="about-details">
+                    <section class="about-module about-working" aria-labelledby="about-working-title">
+                        <h3 id="about-working-title">Soft Skills</h3>
+                        <ul class="about-traits">
+                            <li>Adaptable</li>
+                            <li>Proactive</li>
+                            <li>Collaborative</li>
+                            <li>Time Management</li>
+                            <li>Critical Thinking</li>
+                        </ul>
+                        <div class="about-growth">
+                            <h3>Areas to Develop</h3>
+                            <ul class="about-traits">
+                                <li>Delegating Tasks</li>
+                                <li>Avoiding Over-Analysis</li>
+                                <li>Managing Perfectionism</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="about-module about-languages" aria-labelledby="about-languages-title">
+                        <h3 id="about-languages-title">Languages</h3>
+                        <dl class="language-list">
+                            <div><dt>Portuguese</dt><dd>Native</dd></div>
+                            <div><dt>English</dt><dd>C1</dd></div>
+                            <div><dt>Spanish</dt><dd>B2</dd></div>
+                            <div><dt>German</dt><dd>A2 <span>→ B1</span></dd></div>
+                        </dl>
+                        <p class="language-note">Currently taking a German course to work toward B1 certification.</p>
+                    </section>
+
+                    <section class="about-module about-interests" aria-labelledby="about-interests-title">
+                        <h3 id="about-interests-title">Things I make time for</h3>
+                        <ul class="interest-groups">
+                            <li>
+                                <span class="interest-group-label">Explore</span>
+                                <span class="interest-group-items">Travelling · Learning Languages</span>
+                            </li>
+                            <li>
+                                <span class="interest-group-label">Activities</span>
+                                <span class="interest-group-items">Football Coaching · Outdoor Sports · Basketball · Motor Racing</span>
+                            </li>
+                            <li>
+                                <span class="interest-group-label">Unwind</span>
+                                <span class="interest-group-items">Music · Videogames · Cooking Desserts · Family &amp; Friends</span>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SKILLS
+        ========================== -->
+
+        <section id="skills" class="section section-dark chapter-divider skills-section" aria-labelledby="skills-title">
+            <header class="chapter-header">
+                <h2 id="skills-title" class="section-heading">Skills</h2>
+            </header>
+
+            <div class="skills-grid">
+
+
+                <div class="skill-card">
+
+                    <h3>Manufacturing Data Analysis</h3>
+                    <p>Using MES and SAP shop-floor data, OEE, production KPIs and Power BI, I track performance, identify bottlenecks and turn findings into practical improvement actions.</p>
 
                 </div>
 
 
-                <div class="about-text">
+                <div class="skill-card">
 
-                    <p>
-                        I am an Industrial Engineer motivated by the practical
-                        side of manufacturing: improving flow, reducing waste,
-                        stabilising processes, and turning operational data into
-                        clear decisions that create business value.
-                    </p>
+                    <h3>Supply Chain and Logistics</h3>
+                    <p>Coordinating material and information flow across suppliers, production lines and shifts, with experience in supplier coordination, stock visibility and packaging redesign.</p>
 
-                    <p>
-                        My background combines production operations,
-                        process analysis, supply chain thinking, and continuous
-                        improvement. I enjoy working where engineering discipline
-                        meets daily execution, especially in environments where
-                        performance, quality, and team coordination need to move
-                        together.
-                    </p>
+                </div>
 
-                    <p>
-                        I work at the intersection of technical problem-solving
-                        and operational leadership, helping teams improve output,
-                        increase visibility, and build more reliable processes.
-                        Based in Munich, Germany, I am looking for opportunities
-                        where engineering judgement, operations knowledge, and
-                        business impact come together.
-                    </p>
+
+                <div class="skill-card">
+
+                    <h3>Project Management</h3>
+                    <p>Planning and tracking project scope, schedules, budgets and requirements in MS Project, while coordinating teams, suppliers and contractors through delivery.</p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <h3>CAD Technical Assessment</h3>
+                    <p>Reviewing 2D drawings and 3D models in CAD tools to check technical requirements, design feasibility and alignment between specifications and execution.</p>
 
                 </div>
 
@@ -332,20 +391,10 @@
              EXPERIENCE
         ========================== -->
 
-        <section id="experience" class="section section-dark">
-
-            <div class="section-header">
-
-                <span class="section-number">
-                    02
-                </span>
-
-                <span class="section-title">
-                    EXPERIENCE
-                </span>
-
-            </div>
-
+        <section id="experience" class="section section-dark chapter-divider experience-section" aria-labelledby="experience-title">
+            <header class="chapter-header">
+                <h2 id="experience-title" class="section-heading">Experience</h2>
+            </header>
 
             <div class="experience-list">
 
@@ -353,25 +402,104 @@
                 <article class="experience-item">
 
                     <div class="experience-date">
-                        EXPERIENCE
+                        10/2025 - 02/2026 <br> physical.pt <br> Vila Nova de Famalicão, Portugal
                     </div>
 
 
                     <div class="experience-main">
 
-                        <h3>Bosch</h3>
+                        <h3>Physical</h3>
 
                         <p class="experience-role">
-                            Production / Operations
+                            Construction Project Manager
                         </p>
 
                         <p>
-                            Supporting production operations with a focus on
-                            throughput, downtime, quality and team alignment.
-                            I worked with KPI monitoring, process stability,
-                            and continuous improvement actions to strengthen
-                            operational performance across daily production
-                            demands.
+                        Responsible for planning, coordinating and supervising construction and maintenance projects for one of Portugal’s fastest-growing gym chains. Ensuring full alignment between budget, execution and design, while securing on-time delivery and high-quality standards across multiple locations.
+
+                        <br><br>Main Responsibilities:
+                        <br><br> - Planning and supervising construction and maintenance projects across multiple gym locations;
+                        <br> - Managing project schedules, budgets, procurement and contractor coordination;
+                        <br> - Conducting site inspections, measurements, feasibility checks and progress assessments;
+                        <br> - Preparing and reviewing technical drawings, reports, layouts and implementation plans;
+                        <br> - Collaborating with external engineers, architects and inspectors to validate technical solutions;
+                        <br> - Assessing project risks and applying corrective measures to keep execution on schedule and within scope;
+                        </p>
+
+
+                        <div class="experience-tags">
+
+                            <span>Manufacturing</span>
+
+                            <span>Production</span>
+
+                            <span>Process Flow</span>
+
+                            <span>Quality</span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="experience-item">
+
+                    <div class="experience-date">
+                        04/2025 - 09/2025
+                    </div>
+
+
+                    <div class="experience-main">
+
+                        <h3>Study & Development Period</h3>
+
+                        <p>
+                        Completed Master’s thesis and a Postgraduate programme in Engineering Project Management, while
+                        independently developing Python and SQL skills ahead of returning to the job market.
+                        </p>
+
+
+                        <div class="experience-tags">
+
+                            <span>Python</span>
+
+                            <span>SQL</span>
+
+                            <span>GitHub</span>
+
+                            <span>HTML</span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="experience-item">
+
+                    <div class="experience-date">
+                        03/2024 - 03/2025 <br> bosch.pt <br> Braga, Portugal
+                    </div>
+
+
+                    <div class="experience-main">
+
+                        <h3>Bosch Car Multimedia</h3>
+
+                        <p class="experience-role">
+                            Production Line Leader
+                        </p>
+
+                        <p>
+                            Hands-on experience in a production environment,
+                            supporting manufacturing workflows and helping keep
+                            operations running safely, consistently and efficiently.
+                            This strengthened my understanding of process flow,
+                            execution discipline and the practical constraints
+                            behind every improvement idea.
                         </p>
 
 
@@ -397,49 +525,7 @@
                 <article class="experience-item">
 
                     <div class="experience-date">
-                        EXPERIENCE
-                    </div>
-
-
-                    <div class="experience-main">
-
-                        <h3>Physical</h3>
-
-                        <p class="experience-role">
-                            Production
-                        </p>
-
-                        <p>
-                            Hands-on experience in a production environment,
-                            supporting manufacturing workflows and helping keep
-                            operations running safely, consistently and efficiently.
-                            This strengthened my understanding of process flow,
-                            execution discipline and the practical constraints
-                            behind every improvement idea.
-                        </p>
-
-
-                        <div class="experience-tags">
-
-                            <span>Manufacturing</span>
-
-                            <span>Production</span>
-
-                            <span>Process Flow</span>
-
-                            <span>Quality</span>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <article class="experience-item">
-
-                    <div class="experience-date">
-                        EXPERIENCE
+                        03/2023 - 02/2024 <br> bysteel.pt <br> Braga, Portugal
                     </div>
 
 
@@ -448,7 +534,7 @@
                         <h3>Bysteel FS</h3>
 
                         <p class="experience-role">
-                            Industrial Engineering
+                            Production and Procurement Engineer
                         </p>
 
                         <p>
@@ -478,109 +564,137 @@
 
                 </article>
 
+
+                <article class="experience-item">
+
+                    <div class="experience-date">
+                        03/2021 - 05/2022 <br> ficosa.com <br> Maia, Portugal
+                    </div>
+
+
+                    <div class="experience-main">
+
+                        <h3>Ficosa International</h3>
+
+                        <p class="experience-role">
+                            Internship — Supply Chain Engineer
+                        </p>
+
+                        <p>
+                        Re-engineered the packaging system through process analysis across logistics, production and procurement, reducing packaging costs as part of the Bachelor's thesis.
+                        </p>
+
+
+                        <div class="experience-tags">
+
+                            <span>Engineering</span>
+
+                            <span>Steel Structures</span>
+
+                            <span>CAD</span>
+
+                            <span>Planning</span>
+
+                            <span>Quality</span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
             </div>
 
         </section>
 
 
         <!-- =========================
-             SKILLS
+             EDUCATION
         ========================== -->
 
-        <section id="skills" class="section">
-
-            <div class="section-header">
-
-                <span class="section-number">
-                    03
-                </span>
-
-                <span class="section-title">
-                    SKILLS
-                </span>
-
+        <section id="education" class="section section-dark chapter-divider education-section" aria-labelledby="education-title">
+            <div class="education-content">
+                <header class="chapter-header">
+                    <h2 id="education-title" class="section-heading">Education</h2>
+                </header>
+                <div class="education-list">
+                    <article class="education-item">
+                        <div class="education-date">2021 — 2025</div>
+                        <div class="education-main">
+                            <h3>Master’s Degree</h3>
+                            <p class="education-field">Industrial Engineering and Management</p>
+                            <p class="education-institution">Instituto Politécnico do Cávado e do Ave · Barcelos, Portugal</p>
+                            <p class="education-detail">Thesis: “Analysis and Development of Work Methodologies Applied to Non-Conformance Resolution in Industrial Production.”</p>
+                        </div>
+                    </article>
+                    <article class="education-item education-exchange">
+                        <div class="education-date">2022 — 2023</div>
+                        <div class="education-main">
+                            <h3>Erasmus+ Exchange</h3>
+                            <p class="education-field">Industrial Engineering and Management</p>
+                            <p class="education-institution">University of Applied Sciences Upper Austria · Wels, Austria</p>
+                            <p class="education-detail">Academic exchange completed as part of the Master’s programme.</p>
+                        </div>
+                    </article>
+                    <article class="education-item">
+                        <div class="education-date">2025</div>
+                        <div class="education-main">
+                            <h3>Postgraduate Programme</h3>
+                            <p class="education-field">Engineering Project Management</p>
+                            <p class="education-institution">University of Minho · Guimarães, Portugal</p>
+                            <p class="education-detail">February — June 2025</p>
+                        </div>
+                    </article>
+                    <article class="education-item">
+                        <div class="education-date">2018 — 2021</div>
+                        <div class="education-main">
+                            <h3>Bachelor’s Degree</h3>
+                            <p class="education-field">Industrial Engineering and Management</p>
+                            <p class="education-institution">Instituto Politécnico do Cávado e do Ave · Barcelos, Portugal</p>
+                            <p class="education-detail">Thesis: “Re-engineering of the Packaging System.”</p>
+                        </div>
+                    </article>
+                </div>
             </div>
+        </section>
 
 
-            <div class="skills-grid">
+        <!-- =========================
+             CERTIFICATIONS
+        ========================== -->
 
-
-                <div class="skill-card">
-
-                    <span class="skill-number">
-                        01
-                    </span>
-
-                    <h3>
-                        Operations
-                    </h3>
-
-                    <p>
-                        Production planning, KPI review, OEE analysis,
-                        bottleneck identification and the implementation
-                        of improvement actions across manufacturing teams.
-                    </p>
-
+        <section id="certifications" class="section certifications-section section-dark chapter-divider" aria-labelledby="certifications-title">
+            <div class="certifications-content">
+                <header class="chapter-header">
+                    <h2 id="certifications-title" class="section-heading">Certifications</h2>
+                </header>
+                <div class="credential-list">
+                    <article class="credential-item">
+                        <div class="credential-mark" aria-hidden="true">EN</div>
+                        <div class="credential-main">
+                            <h3>C1 Advanced English</h3>
+                            <p>Cambridge English · Wall Street English</p>
+                        </div>
+                        <span class="credential-date">2024 — 2026</span>
+                    </article>
+                    <article class="credential-item">
+                        <div class="credential-mark" aria-hidden="true">CAD</div>
+                        <div class="credential-main">
+                            <h3>Mechanical Design · SOLIDWORKS</h3>
+                            <p>Dassault Systèmes</p>
+                        </div>
+                        <span class="credential-date">2019</span>
+                    </article>
+                    <article class="credential-item credential-in-progress">
+                        <div class="credential-mark" aria-hidden="true">DE</div>
+                        <div class="credential-main">
+                            <h3>German Language</h3>
+                            <p>A2 course completed · currently working towards B1</p>
+                        </div>
+                        <span class="credential-date">In progress</span>
+                    </article>
                 </div>
-
-
-                <div class="skill-card">
-
-                    <span class="skill-number">
-                        02
-                    </span>
-
-                    <h3>
-                        Supply Chain
-                    </h3>
-
-                    <p>
-                        Material flow coordination, planning routines,
-                        procurement support, inventory visibility and
-                        alignment between suppliers and production.
-                    </p>
-
-                </div>
-
-
-                <div class="skill-card">
-
-                    <span class="skill-number">
-                        03
-                    </span>
-
-                    <h3>
-                        Project Management
-                    </h3>
-
-                    <p>
-                        Structured problem solving, cross-functional
-                        coordination, planning and turning operational
-                        issues into measurable improvement plans.
-                    </p>
-
-                </div>
-
-
-                <div class="skill-card">
-
-                    <span class="skill-number">
-                        04
-                    </span>
-
-                    <h3>
-                        Data &amp; Tools
-                    </h3>
-
-                    <p>
-                        SAP, Power BI, Excel, CAD and dashboarding for
-                        performance analysis, reporting and decision support.
-                    </p>
-
-                </div>
-
             </div>
-
         </section>
 
 
@@ -590,27 +704,14 @@
 
         <section
             id="contact"
-            class="section contact-section"
+            class="section contact-section chapter-divider"
+            aria-labelledby="contact-message-title"
         >
-
-            <div class="section-header">
-
-                <span class="section-number">
-                    04
-                </span>
-
-                <span class="section-title">
-                    CONTACT
-                </span>
-
-            </div>
-
-
             <div class="contact-content">
 
-                <h2>
-                    Let's build<br>
-                    <span>something.</span>
+                <h2 id="contact-message-title" class="contact-message">
+                    Still not<br>
+                    <span>convinced?</span>
                 </h2>
 
                 <p>
@@ -652,7 +753,7 @@
     </footer>
 
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20260928-hero-controls"></script>
 
 </body>
 
