@@ -7,7 +7,7 @@
 
     <title>Jorge Ribeiro | Industrial Engineer</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=20261002-physical-tools">
 </head>
 
 <body>
@@ -276,7 +276,7 @@
                         critical projects that required meeting output targets
                         and schedules while assessing requirements. I also pursue
                         online courses and certifications to build skills that
-                        complement my experience.
+                        complement my experience, mainly with programming languages such as Python, SQL, JavaScript and HTML.
                     </p>
                 </div>
 
@@ -344,40 +344,53 @@
                 <h2 id="skills-title" class="section-heading">Skills</h2>
             </header>
 
-            <div class="skills-grid">
+            <div class="skills-list">
+                <section class="skill-row" aria-labelledby="skill-production-title">
+                    <h3 id="skill-production-title">Production Planning &amp; Control</h3>
+                    <ul class="skill-tags">
+                        <li>MES (Manufacturing Execution Systems)</li>
+                        <li>SAP MM/PP</li>
+                        <li>Lean Manufacturing / Kaizen / 5S</li>
+                        <li>Standard Work &amp; Work Instructions</li>
+                        <li>Root Cause Analysis (5 Whys, Ishikawa)</li>
+                        <li>Production KPIs: OEE, throughput, yield &amp; downtime</li>
+                    </ul>
+                </section>
 
+                <section class="skill-row" aria-labelledby="skill-data-title">
+                    <h3 id="skill-data-title">Manufacturing Data Analysis</h3>
+                    <ul class="skill-tags">
+                        <li>Power BI</li>
+                        <li>MS Excel: Power Query, VLOOKUP</li>
+                        <li>SQL</li>
+                        <li>Python</li>
+                        <li>DMAIC (Define, Measure, Analyze, Improve, Control)</li>
+                        <li>Decision-Making Tools: Pareto Analysis, SWOT Analysis, Eisenhower Matrix, Decision Matrix</li>
+                    </ul>
+                </section>
 
-                <div class="skill-card">
+                <section class="skill-row" aria-labelledby="skill-production-procurement-title">
+                    <h3 id="skill-production-procurement-title">Production &amp; Procurement Engineering</h3>
+                    <ul class="skill-tags">
+                        <li>Technical Drawing &amp; Production Documentation Review</li>
+                        <li>Make-or-Buy Analysis</li>
+                        <li>Subcontractor Portfolio Management</li>
+                        <li>Supplier Quality Control</li>
+                        <li>Production Order Tracking &amp; Data Management</li>
+                        <li>Packaging Cost Analysis &amp; Cost Modelling</li>
+                    </ul>
+                </section>
 
-                    <h3>Manufacturing Data Analysis</h3>
-                    <p>Using MES and SAP shop-floor data, OEE, production KPIs and Power BI, I track performance, identify bottlenecks and turn findings into practical improvement actions.</p>
-
-                </div>
-
-
-                <div class="skill-card">
-
-                    <h3>Supply Chain and Logistics</h3>
-                    <p>Coordinating material and information flow across suppliers, production lines and shifts, with experience in supplier coordination, stock visibility and packaging redesign.</p>
-
-                </div>
-
-
-                <div class="skill-card">
-
-                    <h3>Project Management</h3>
-                    <p>Planning and tracking project scope, schedules, budgets and requirements in MS Project, while coordinating teams, suppliers and contractors through delivery.</p>
-
-                </div>
-
-
-                <div class="skill-card">
-
-                    <h3>CAD Technical Assessment</h3>
-                    <p>Reviewing 2D drawings and 3D models in CAD tools to check technical requirements, design feasibility and alignment between specifications and execution.</p>
-
-                </div>
-
+                <section class="skill-row" aria-labelledby="skill-construction-title">
+                    <h3 id="skill-construction-title">Construction Project Management</h3>
+                    <ul class="skill-tags">
+                        <li>CAD Software: Tekla Structures, Autodesk Revit &amp; AutoCAD</li>
+                        <li>Architectural &amp; Specialist Drawing Review</li>
+                        <li>MS Project: Project Scope, Scheduling &amp; Budget Control</li>
+                        <li>Milestone &amp; Work-Package Planning</li>
+                        <li>Construction Quality Control &amp; Opening Handover</li>
+                    </ul>
+                </section>
             </div>
 
         </section>
@@ -395,7 +408,7 @@
             <div class="experience-list">
 
 
-                <article class="experience-item">
+                <article class="experience-item experience-item--physical">
 
                     <div class="experience-date">
                         10/2025 - 02/2026 <br> physical.pt <br> Vila Nova de Famalicão, Portugal
@@ -410,30 +423,37 @@
                             Construction Project Manager
                         </p>
 
-                        <p>
-                        Responsible for planning, coordinating and supervising construction and maintenance projects for one of Portugal’s fastest-growing gym chains. Ensuring full alignment between budget, execution and design, while securing on-time delivery and high-quality standards across multiple locations.
-
-                        <br><br>Main Responsibilities:
-                        <br><br> - Planning and supervising construction and maintenance projects across multiple gym locations;
-                        <br> - Managing project schedules, budgets, procurement and contractor coordination;
-                        <br> - Conducting site inspections, measurements, feasibility checks and progress assessments;
-                        <br> - Preparing and reviewing technical drawings, reports, layouts and implementation plans;
-                        <br> - Collaborating with external engineers, architects and inspectors to validate technical solutions;
-                        <br> - Assessing project risks and applying corrective measures to keep execution on schedule and within scope;
-                        </p>
-
-
-                        <div class="experience-tags">
-
-                            <span>Manufacturing</span>
-
-                            <span>Production</span>
-
-                            <span>Process Flow</span>
-
-                            <span>Quality</span>
-
+                        <div class="experience-summary-row">
+                            <p class="experience-summary">
+                                Oversaw construction and maintenance projects for one of Portugal’s fastest-growing gym chains. Ensuring full alignment between budget, execution and design, while securing on-time delivery and high-quality standards across multiple locations.
+                            </p>
+                            <button class="experience-toggle experience-toggle--compact" type="button" data-responsibility-toggle data-role="Physical" aria-controls="physical-responsibilities" aria-expanded="false" aria-label="Show all responsibilities for Physical">
+                                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <path d="M5 12h14" />
+                                    <path class="experience-toggle-plus-vertical" d="M12 5v14" />
+                                </svg>
+                            </button>
                         </div>
+
+                        <div class="experience-responsibility-panel experience-responsibility-panel--compact">
+                        <ul class="experience-responsibilities" id="physical-responsibilities">
+                            <li>Reviewed architectural and specialist drawings in Tekla Structures, Revit and AutoCAD to define project requirements and identify constraints.</li>
+                            <li>Defined construction and maintenance work packages and allocated scopes to specialist trades.</li>
+                            <li>Selected contractors and suppliers based on project requirements, availability and constraints.</li>
+                            <li>Managed scope, schedules and budgets in MS Project against each gym’s planned opening date.</li>
+                            <li>Coordinated contractors and specialist trades, monitored progress and quality, and handed over completed gyms for opening.</li>
+                        </ul>
+                        </div>
+
+
+                        <ul class="experience-tags skill-tags" aria-label="Tools used in this role">
+                            <li>Tekla Structures</li>
+                            <li>Autodesk Revit</li>
+                            <li>AutoCAD</li>
+                            <li>MS Project</li>
+                            <li>Construction Scheduling &amp; Milestone Planning</li>
+                            <li>Construction Quality Control &amp; Handover</li>
+                        </ul>
 
                     </div>
 
@@ -451,23 +471,18 @@
 
                         <h3>Study & Development Period</h3>
 
-                        <p>
+                        <p class="experience-summary">
                         Completed Master’s thesis and a Postgraduate programme in Engineering Project Management, while
                         independently developing Python and SQL skills ahead of returning to the job market.
                         </p>
 
 
-                        <div class="experience-tags">
-
-                            <span>Python</span>
-
-                            <span>SQL</span>
-
-                            <span>GitHub</span>
-
-                            <span>HTML</span>
-
-                        </div>
+                        <ul class="experience-tags skill-tags" aria-label="Tools and technologies">
+                            <li>Python</li>
+                            <li>SQL</li>
+                            <li>GitHub</li>
+                            <li>HTML</li>
+                        </ul>
 
                     </div>
 
@@ -489,29 +504,41 @@
                             Production Line Leader
                         </p>
 
-                        <p>
-                            Hands-on experience in a production environment,
-                            supporting manufacturing workflows and helping keep
-                            operations running safely, consistently and efficiently.
-                            This strengthened my understanding of process flow,
-                            execution discipline and the practical constraints
-                            behind every improvement idea.
-                        </p>
-
-
-                        <div class="experience-tags">
-
-                            <span>Operations</span>
-
-                            <span>OEE</span>
-
-                            <span>Power BI</span>
-
-                            <span>Lean</span>
-
-                            <span>KPI Management</span>
-
+                        <div class="experience-summary-row">
+                            <p class="experience-summary">
+                                Led daily production across approximately 12 lines and a shift team of around 50 operators in Bosch Car Multimedia’s large-scale automotive electronics manufacturing environment. The work centered on meeting output targets while maintaining quality and production continuity.
+                            </p>
+                            <button class="experience-toggle experience-toggle--compact" type="button" data-responsibility-toggle data-role="Bosch Car Multimedia" aria-controls="bosch-responsibilities" aria-expanded="false" aria-label="Show all responsibilities for Bosch Car Multimedia">
+                                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <path d="M5 12h14" />
+                                    <path class="experience-toggle-plus-vertical" d="M12 5v14" />
+                                </svg>
+                            </button>
                         </div>
+
+                        <div class="experience-responsibility-panel experience-responsibility-panel--compact">
+                        <ul class="experience-responsibilities" id="bosch-responsibilities">
+                            <li>Used MES and SAP MM/PP for production control; monitored OEE, throughput, yield and downtime through Power BI.</li>
+                            <li>During a continuous-improvement initiative in my 2024–2025 role, increased OEE by <strong>approximately 5%</strong>, exceeding Bosch’s annual target.</li>
+                            <li>Reduced scrap as a share of sales by <strong>0.30 percentage points</strong>, from 0.96% to 0.66%, finishing 0.08 points below Bosch’s 0.74% target.</li>
+                            <li>Reduced recorded scrap-cause categories by <strong>33.7%</strong>, from 83 to 55.</li>
+                            <li>Coordinated daily performance meetings with maintenance, planning, logistics, engineering and quality.</li>
+                            <li>Conducted periodic 5S checks across production lines and followed up on non-conformities and corrective actions.</li>
+                            <li>Checked work-instruction compliance and proposed shop-floor procedure improvements.</li>
+                            <li>Applied DMAIC and Pareto analysis to prioritize scrap-reduction opportunities.</li>
+                            <li>Ran recurring 5 Whys sessions with operators to identify opportunities to optimize specific production lines.</li>
+                        </ul>
+                        </div>
+
+
+                        <ul class="experience-tags skill-tags" aria-label="Skills and tools used in this role">
+                            <li>MES (Manufacturing Execution Systems)</li>
+                            <li>SAP MM/PP</li>
+                            <li>Production KPIs</li>
+                            <li>Power BI</li>
+                            <li>Lean / 5S</li>
+                            <li>DMAIC, Pareto &amp; 5 Whys</li>
+                        </ul>
 
                     </div>
 
@@ -533,28 +560,38 @@
                             Production and Procurement Engineer
                         </p>
 
-                        <p>
-                            Work in the steel structures industry combining
-                            engineering knowledge with industrial execution.
-                            The role reinforced how technical decisions affect
-                            lead time, quality, cost and practical delivery on
-                            the shop floor and in field execution.
-                        </p>
-
-
-                        <div class="experience-tags">
-
-                            <span>Engineering</span>
-
-                            <span>Steel Structures</span>
-
-                            <span>CAD</span>
-
-                            <span>Planning</span>
-
-                            <span>Quality</span>
-
+                        <div class="experience-summary-row">
+                            <p class="experience-summary">
+                                Worked in the manufacture of steel and aluminium façades and architectural envelopes at Bysteel FS, supporting construction projects delivered through both in-house production and subcontractors. The work connected technical preparation, fabrication and site delivery, with project requirements, production capacity and dispatch schedules closely linked.
+                            </p>
+                            <button class="experience-toggle experience-toggle--compact" type="button" data-responsibility-toggle data-role="Bysteel FS" aria-controls="bysteel-responsibilities" aria-expanded="false" aria-label="Show all responsibilities for Bysteel FS">
+                                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <path d="M5 12h14" />
+                                    <path class="experience-toggle-plus-vertical" d="M12 5v14" />
+                                </svg>
+                            </button>
                         </div>
+
+                        <div class="experience-responsibility-panel experience-responsibility-panel--compact">
+                        <ul class="experience-responsibilities" id="bysteel-responsibilities">
+                            <li>Reviewed production files from the preparation office, corrected documentation and reported non-conformities requiring revision.</li>
+                            <li>Allocated projects to internal or subcontracted production according to available capacity and process capabilities.</li>
+                            <li>Selected subcontractors based on delivery lead time, quoted cost, available processes and materials.</li>
+                            <li>Managed the subcontractor portfolio by identifying potential partners and ending unsuitable partnerships.</li>
+                            <li>Coordinated internal and subcontracted production to meet project delivery and dispatch dates.</li>
+                            <li>Communicated production-allocation decisions to site management and project managers to align costs and schedules.</li>
+                            <li>Maintained a production-project database tracking manufacturing and dispatch dates, status, budgets and approvals.</li>
+                        </ul>
+                        </div>
+
+                        <ul class="experience-tags skill-tags" aria-label="Tools and technical skills used in this role">
+                            <li>Tekla Structures</li>
+                            <li>Autodesk Revit</li>
+                            <li>AutoCAD</li>
+                            <li>MS Excel</li>
+                            <li>Supplier Quality Inspection</li>
+                            <li>Production Order &amp; Database Management</li>
+                        </ul>
 
                     </div>
 
@@ -576,24 +613,35 @@
                             Internship — Supply Chain Engineer
                         </p>
 
-                        <p>
-                        Re-engineered the packaging system through process analysis across logistics, production and procurement, reducing packaging costs as part of the Bachelor's thesis.
-                        </p>
-
-
-                        <div class="experience-tags">
-
-                            <span>Engineering</span>
-
-                            <span>Steel Structures</span>
-
-                            <span>CAD</span>
-
-                            <span>Planning</span>
-
-                            <span>Quality</span>
-
+                        <div class="experience-summary-row">
+                            <p class="experience-summary">
+                                Completed my bachelor’s thesis in an automotive manufacturing environment, analysing how packaging requirements across production, logistics and procurement could be redesigned to reduce cost while meeting technical constraints.
+                            </p>
+                            <button class="experience-toggle experience-toggle--compact" type="button" data-responsibility-toggle data-role="Ficosa International" aria-controls="ficosa-responsibilities" aria-expanded="false" aria-label="Show all responsibilities for Ficosa International">
+                                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <path d="M5 12h14" />
+                                    <path class="experience-toggle-plus-vertical" d="M12 5v14" />
+                                </svg>
+                            </button>
                         </div>
+
+                        <div class="experience-responsibility-panel experience-responsibility-panel--compact">
+                        <ul class="experience-responsibilities" id="ficosa-responsibilities">
+                            <li>Analysed packaging costs and material alternatives, comparing corrugated-board specifications and supplier options against technical requirements.</li>
+                            <li>Built an Excel cost model for approximately 200 product references, packaging units and pallet configurations.</li>
+                            <li>Applied Pareto analysis to prioritise packaging references by cost-saving potential.</li>
+                            <li>Developed six packaging redesign proposals with projected annual savings around <strong>€90,000</strong>.</li>
+                            <li>Modelled projected annual savings of <strong>€5,000</strong> for one packaging reference.</li>
+                        </ul>
+                        </div>
+
+                        <ul class="experience-tags skill-tags" aria-label="Tools and technical skills used in this role">
+                            <li>MS Excel: Cost Modelling</li>
+                            <li>Pareto Analysis</li>
+                            <li>Packaging Design &amp; Redesign</li>
+                            <li>Corrugated Board Specification</li>
+                            <li>Pallet Configuration Analysis</li>
+                        </ul>
 
                     </div>
 
@@ -731,6 +779,20 @@
 
     </main>
 
+    <button
+        class="back-to-top"
+        id="back-to-top"
+        type="button"
+        aria-label="Back to top"
+        aria-hidden="true"
+        title="Back to top"
+    >
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path class="back-to-top-arrow-outline" d="M12 19V5M6 11l6-6 6 6" />
+            <path class="back-to-top-arrow" d="M12 19V5M6 11l6-6 6 6" />
+        </svg>
+    </button>
+
 
     <!-- =========================
          FOOTER
@@ -749,7 +811,7 @@
     </footer>
 
 
-    <script src="script.js?v=20260928-hero-controls"></script>
+    <script src="script.js?v=20261001-back-to-top-scroll"></script>
 
 </body>
 

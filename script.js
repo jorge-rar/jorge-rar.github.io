@@ -343,3 +343,81 @@ if (
     );
 
 }
+
+
+/* =========================================
+   BACK TO TOP
+========================================= */
+
+const backToTopButton =
+    document.getElementById("back-to-top");
+
+const heroSection =
+    document.getElementById("home");
+
+const siteLogo =
+    document.querySelector(".logo");
+
+const siteFooter =
+    document.querySelector("footer");
+
+if (backToTopButton && heroSection) {
+    const updateBackToTop = () => {
+        const hasLeftTop = window.scrollY > 0;
+        const footerOverlap = siteFooter
+            ? Math.max(0, window.innerHeight - siteFooter.getBoundingClientRect().top)
+            : 0;
+
+        backToTopButton.classList.toggle("is-visible", hasLeftTop);
+        backToTopButton.setAttribute("aria-hidden", String(!hasLeftTop));
+        backToTopButton.style.bottom = `${16 + footerOverlap}px`;
+    };
+
+    updateBackToTop();
+    requestAnimationFrame(updateBackToTop);
+    window.addEventListener("scroll", updateBackToTop, { passive: true });
+    window.addEventListener("resize", updateBackToTop);
+
+    backToTopButton.addEventListener("click", () => {
+        siteLogo?.focus({ preventScroll: true });
+        window.scrollTo({
+            top: 0,
+            behavior: reducedMotionPreference.matches ? "auto" : "smooth"
+        });
+    });
+}
+
+
+/* =========================================
+   EXPERIENCE RESPONSIBILITY DISCLOSURES
+========================================= */
+
+const responsibilityToggles =
+    document.querySelectorAll("[data-responsibility-toggle]");
+
+if (responsibilityToggles.length) {
+    responsibilityToggles.forEach((toggle) => {
+        const responsibilityList =
+            document.getElementById(toggle.getAttribute("aria-controls"));
+        const responsibilityPanel =
+            responsibilityList?.closest(".experience-responsibility-panel");
+        const roleName = toggle.dataset.role;
+
+        if (!responsibilityList || !responsibilityPanel) return;
+
+        toggle.addEventListener("click", () => {
+            const isExpanded =
+                responsibilityPanel.classList.toggle("is-expanded");
+            const actionLabel = isExpanded ? "Hide" : "Show all";
+
+            toggle.setAttribute("aria-expanded", String(isExpanded));
+            toggle.setAttribute(
+                "aria-label",
+                `${actionLabel} responsibilities for ${roleName}`
+            );
+            toggle.title = `${actionLabel} responsibilities for ${roleName}`;
+        });
+    });
+
+    document.documentElement.classList.add("has-experience-disclosures");
+}
