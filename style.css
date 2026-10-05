@@ -1953,6 +1953,39 @@ html.has-experience-disclosures .experience-toggle {
     border-bottom: 1px solid var(--light-grey);
 }
 
+.education-item--experience-layout {
+    column-gap: 0;
+}
+
+.education-item--experience-typography .education-main h3 {
+    margin: 0 0 8px;
+    font-family: var(--font-sans);
+    font-size: 42px;
+    line-height: 1;
+}
+
+.education-item--experience-typography .education-field {
+    margin: 0 0 25px;
+    color: var(--orange);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.education-item--experience-typography .education-institution,
+.education-item--experience-typography .education-detail {
+    max-width: 82ch;
+    margin: 0 0 10px;
+    color: #d7d3cc;
+    font-family: var(--font-sans);
+    font-size: clamp(16px, 1.25vw, 18px);
+    line-height: 1.55;
+    text-align: justify;
+    hyphens: auto;
+}
+
 .education-date {
     padding-top: 7px;
     color: var(--orange);
@@ -1981,6 +2014,14 @@ html.has-experience-disclosures .experience-toggle {
 
 .education-detail {
     max-width: 72ch;
+}
+
+.education-tags {
+    margin-top: 18px;
+}
+
+.education-tags.skill-tags li {
+    font-size: 13px;
 }
 
 .education-exchange .education-main {
@@ -2525,6 +2566,10 @@ footer {
     .education-item {
         grid-template-columns: 1fr;
         gap: 12px;
+    }
+
+    .education-item--experience-typography .education-main h3 {
+        font-size: 35px;
     }
 
 
