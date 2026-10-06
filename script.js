@@ -364,13 +364,16 @@ const siteFooter =
 if (backToTopButton && heroSection) {
     const updateBackToTop = () => {
         const hasLeftTop = window.scrollY > 0;
+        const mobileClearance = window.matchMedia("(max-width: 900px)").matches
+            ? 48
+            : 0;
         const footerOverlap = siteFooter
             ? Math.max(0, window.innerHeight - siteFooter.getBoundingClientRect().top)
             : 0;
 
         backToTopButton.classList.toggle("is-visible", hasLeftTop);
         backToTopButton.setAttribute("aria-hidden", String(!hasLeftTop));
-        backToTopButton.style.bottom = `${16 + footerOverlap}px`;
+        backToTopButton.style.bottom = `${16 + footerOverlap + mobileClearance}px`;
     };
 
     updateBackToTop();
