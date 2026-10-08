@@ -2419,36 +2419,58 @@ html.has-experience-disclosures .experience-toggle {
 .contact-content {
 
     position: relative;
-    isolation: isolate;
+    z-index: 1;
     max-width: 830px;
 }
 
-.contact-content::before {
+.contact-geometry {
     position: absolute;
-    z-index: -1;
-    top: 48%;
-    left: -10vw;
-    width: 120vw;
-    height: 100vh;
-    border-radius: 50%;
-    background: radial-gradient(ellipse at 54% 50%, rgba(232, 120, 36, 0.16) 0%, rgba(232, 120, 36, 0.09) 28%, rgba(232, 120, 36, 0.035) 48%, transparent 72%);
-    filter: blur(30px);
-    content: "";
+    z-index: 0;
+    inset: 0;
+    overflow: hidden;
     pointer-events: none;
-    transform: translate3d(-35px, -50%, 0) scale(0.98);
-    animation: contact-glow-drift 24s ease-in-out infinite alternate;
 }
 
-@keyframes contact-glow-drift {
-    to {
-        transform: translate3d(55px, -48%, 0) scale(1.06);
-    }
+.contact-geometry svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+    overflow: visible;
+    fill: none;
+    stroke: rgba(169, 78, 19, 0.15);
+    stroke-width: 1.15;
+    vector-effect: non-scaling-stroke;
+}
+
+.contact-geometry-orbit {
+    transform-origin: 50% 50%;
+    animation: contact-geometry-rotate 90s linear infinite;
+}
+
+.contact-geometry-drift {
+    stroke: rgba(169, 78, 19, 0.1);
+    animation: contact-geometry-drift 32s ease-in-out infinite alternate;
+}
+
+.contact-geometry-drift circle {
+    fill: var(--orange);
+    stroke: none;
+    opacity: 0.55;
+}
+
+@keyframes contact-geometry-rotate {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes contact-geometry-drift {
+    to { transform: translate3d(12px, -9px, 0); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .contact-content::before {
+    .contact-geometry-orbit,
+    .contact-geometry-drift {
         animation: none;
-        transform: translate3d(-35px, -50%, 0) scale(0.98);
     }
 }
 
@@ -2906,8 +2928,8 @@ footer {
     }
 
     .section.contact-section {
-        min-height: calc(100svh - 100px);
-        padding: 96px 25px 0;
+        min-height: auto;
+        padding: 96px 25px 24px;
     }
 
     .contact-message {
@@ -3018,6 +3040,68 @@ footer {
         gap: 12px;
     }
 
+    .education-item > .education-main {
+        display: contents;
+    }
+
+    .education-item > .education-main h3 {
+        order: 0;
+    }
+
+    .education-item > .education-main .education-field {
+        order: 1;
+    }
+
+    .education-item > .education-main .education-institution {
+        order: 2;
+    }
+
+    .education-item > .experience-date {
+        order: 3;
+        padding-top: 0;
+    }
+
+    .education-item > .education-main .education-detail {
+        order: 4;
+    }
+
+    .education-item > .education-main .education-tags {
+        order: 5;
+    }
+
+    .education-exchange .education-main {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .education-exchange .education-main::before {
+        content: none;
+    }
+
+    .education-exchange {
+        position: relative;
+    }
+
+    .education-exchange::before {
+        position: absolute;
+        top: 25px;
+        bottom: 25px;
+        left: 24px;
+        width: 1px;
+        background: var(--orange);
+        content: "";
+        pointer-events: none;
+    }
+
+    .education-exchange .education-main > * {
+        margin-left: 48px;
+    }
+
+    .education-exchange .education-main > .education-institution,
+    .education-exchange .education-main > .education-detail {
+        width: calc(100% - 48px);
+    }
+
     .education-item--experience-hierarchy .education-main h3 {
         font-size: 35px;
     }
@@ -3059,11 +3143,11 @@ footer {
 
     footer {
 
-        padding: 25px;
+        padding: 18px 25px max(12px, env(safe-area-inset-bottom));
 
         flex-direction: column;
 
-        gap: 10px;
+        gap: 6px;
     }
 }
 
