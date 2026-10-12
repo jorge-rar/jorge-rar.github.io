@@ -197,6 +197,87 @@ nav {
 }
 
 
+.language-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+
+.language-switch-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 2px;
+    border: 0;
+    background: transparent;
+    color: #b7b3aa;
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.25s ease;
+}
+
+
+.language-switch-button > span {
+    position: relative;
+}
+
+
+.language-switch-button > span::after {
+    position: absolute;
+    right: 0;
+    bottom: -6px;
+    left: 0;
+    height: 1px;
+    background: currentColor;
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.25s ease;
+}
+
+
+.language-switch-button:not(:disabled):hover,
+.language-switch-button:not(:disabled):focus-visible {
+    color: var(--orange);
+}
+
+
+.language-switch-button:not(:disabled):hover > span::after,
+.language-switch-button:not(:disabled):focus-visible > span::after {
+    transform: scaleX(1);
+}
+
+
+.language-switch-button.is-current {
+    color: #b7b3aa;
+}
+
+
+.language-switch-button:disabled {
+    color: #b7b3aa;
+    cursor: not-allowed;
+}
+
+
+.language-switch-button:focus-visible {
+    outline: 2px solid var(--orange);
+    outline-offset: 4px;
+}
+
+
+.language-switch-divider {
+    color: #77746e;
+    font-size: 12px;
+    line-height: 1;
+}
+
+
 .mobile-menu-button {
     display: none;
 }
@@ -1023,6 +1104,12 @@ nav a:focus-visible > span::after {
 .hero .button,
 .hero .curriculum-button {
     font-family: monospace;
+}
+
+
+#home:lang(de) .hero-actions .button,
+#home:lang(de) .hero-actions .curriculum-button {
+    width: 210px;
 }
 
 
@@ -2805,6 +2892,12 @@ footer {
         border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
 
+
+    .language-switch-button {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
     
     nav a:last-child {
         border-bottom: none;
@@ -2899,6 +2992,12 @@ footer {
     .curriculum-button {
         width: 100%;
         min-width: 0;
+    }
+
+
+    #home:lang(de) .hero-actions .button,
+    #home:lang(de) .hero-actions .curriculum-button {
+        width: 100%;
     }
 
     .contact-actions {

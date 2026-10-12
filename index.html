@@ -16,7 +16,7 @@
 
     <title>Jorge Ribeiro | Industrial Engineer</title>
 
-    <link rel="stylesheet" href="style.css?v=20261006-ga4">
+    <link rel="stylesheet" href="style.css?v=20261012-hero-de-actions">
 </head>
 
 <body>
@@ -43,6 +43,16 @@
             </nav>
 
             <div class="nav-actions">
+                <div class="language-switch" role="group" aria-label="Language">
+                    <button class="language-switch-button is-current" type="button" lang="en" data-language="en" aria-pressed="true" aria-label="English selected">
+                        <span>EN</span>
+                    </button>
+                    <span class="language-switch-divider" aria-hidden="true">|</span>
+                    <button class="language-switch-button" type="button" lang="de" data-language="de" aria-pressed="false" aria-label="Switch language to German">
+                        <span>DE</span>
+                    </button>
+                </div>
+
                 <a
                     class="feedback-button"
                     href="https://forms.gle/vCs86jN86ChcaJLW6"
@@ -78,7 +88,7 @@
              HERO
         ========================== -->
 
-        <section id="home" class="hero">
+        <section id="home" class="hero" lang="en">
 
             <!-- Animated background -->
             <div class="hero-grid"></div>
@@ -139,10 +149,10 @@
                 </div>
 
 
-                <span class="sr-only">Industrial Engineer focused on continuous improvement and project delivery.</span>
+                <span class="sr-only" id="hero-accessible-summary">Industrial Engineer focused on continuous improvement and project delivery.</span>
 
 
-                <p class="hero-summary">
+                <p class="hero-summary" id="hero-summary">
                     Industrial Engineer with 3+ years of experience across the automotive and construction industries. I use MES for production planning and control, SAP for shop-floor management, MS Project for cost, scope and schedule control, and CAD tools for technical reviews.
                 </p>
 
@@ -153,7 +163,7 @@
                         <span></span>
                     </span>
 
-                    <span>80687 Munich, Germany</span>
+                    <span id="hero-location-text">80687 Munich, Germany</span>
 
                 </div>
 
@@ -169,6 +179,7 @@
                         <a
                             href="#experience"
                             class="button button-primary"
+                            id="hero-view-experience"
                         >
                             View Experience
                         </a>
@@ -176,6 +187,7 @@
                         <a
                             href="#contact"
                             class="button button-secondary"
+                            id="hero-get-in-touch"
                         >
                             Get in touch
                         </a>
@@ -193,7 +205,7 @@
                             aria-expanded="false"
                             aria-controls="curriculum-menu"
                         >
-                            Curriculum
+                            <span id="hero-curriculum-label">Curriculum</span>
                             <span class="dropdown-arrow">▾</span>
                         </button>
 
@@ -203,25 +215,25 @@
                         >
 
                             <a href="documents/CV_Jorge_Ribeiro_EN.pdf" target="_blank">
-                                English
+                                <span id="hero-cv-en-label">English</span>
                             </a>
 
                             <a href="documents/CV_Jorge_Ribeiro_DE.pdf" target="_blank">
-                                Deutsch
+                                <span id="hero-cv-de-label">Deutsch</span>
                             </a>
 
                         </div>
 
                     </div>
 
-                    <div class="hero-social-links" aria-label="Professional profiles">
-                        <a class="hero-social-link" href="https://www.linkedin.com/in/jorgearibeiro/" target="_blank" rel="noopener noreferrer" aria-label="Open Jorge Ribeiro’s LinkedIn profile">
+                    <div class="hero-social-links" id="hero-social-links" aria-label="Professional profiles">
+                        <a class="hero-social-link" href="https://www.linkedin.com/in/jorgearibeiro/" target="_blank" rel="noopener noreferrer" id="hero-linkedin-link" aria-label="Open Jorge Ribeiro’s LinkedIn profile">
                             <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                                 <path d="M10.6 13.4a4.5 4.5 0 0 0 6.4 0l2.1-2.1a4.5 4.5 0 0 0-6.4-6.4l-1.2 1.2" />
                                 <path d="M13.4 10.6a4.5 4.5 0 0 0-6.4 0l-2.1 2.1a4.5 4.5 0 0 0 6.4 6.4l1.2-1.2" />
                             </svg>
                         </a>
-                        <a class="hero-social-link" href="https://github.com/jorge-rar" target="_blank" rel="noopener noreferrer" aria-label="Open Jorge Ribeiro’s GitHub profile">
+                        <a class="hero-social-link" href="https://github.com/jorge-rar" target="_blank" rel="noopener noreferrer" id="hero-github-link" aria-label="Open Jorge Ribeiro’s GitHub profile">
                             <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                                 <circle cx="6" cy="5" r="2" />
                                 <circle cx="18" cy="5" r="2" />
@@ -249,6 +261,7 @@
                     <img
                         class="hero-portrait"
                         src="assets/jorge-portrait-cutout.png"
+                        id="hero-portrait-image"
                         alt="Portrait of Jorge Ribeiro"
                         fetchpriority="high"
                     >
@@ -279,25 +292,25 @@
              ABOUT
         ========================== -->
 
-        <section id="about" class="section about-section chapter-divider">
+        <section id="about" class="section about-section chapter-divider" lang="en">
 
             <div class="about-content">
 
                 <header class="about-heading">
                     <h2 class="about-title">
-                        <span>About</span>
+                        <span id="about-title">About</span>
                     </h2>
                 </header>
 
                 <div class="about-intro">
-                    <p>
+                    <p id="about-intro-primary">
                         Industrial Engineer with 3+ years across automotive and
                         construction, specializing in manufacturing processes and
                         planning, data analysis, visualization and reporting,
                         technical drawing review, and construction project
                         leadership.
                     </p>
-                    <p>
+                    <p id="about-intro-secondary">
                         Across fast-paced environments, I’ve contributed to
                         critical projects that required meeting output targets
                         and schedules while assessing requirements. I also pursue
@@ -310,18 +323,18 @@
                     <section class="about-module about-working" aria-labelledby="about-working-title">
                         <h3 id="about-working-title">Soft Skills</h3>
                         <ul class="about-traits">
-                            <li>Adaptable</li>
-                            <li>Proactive</li>
-                            <li>Collaborative</li>
-                            <li>Time Management</li>
-                            <li>Critical Thinking</li>
+                            <li id="about-skill-adaptable">Adaptable</li>
+                            <li id="about-skill-proactive">Proactive</li>
+                            <li id="about-skill-collaborative">Collaborative</li>
+                            <li id="about-skill-time-management">Time Management</li>
+                            <li id="about-skill-critical-thinking">Critical Thinking</li>
                         </ul>
                         <div class="about-growth">
-                            <h3>Areas to Develop</h3>
+                            <h3 id="about-growth-title">Areas to Develop</h3>
                             <ul class="about-traits">
-                                <li>Delegating Tasks</li>
-                                <li>Avoiding Over-Analysis</li>
-                                <li>Managing Perfectionism</li>
+                                <li id="about-growth-delegating">Delegating Tasks</li>
+                                <li id="about-growth-over-analysis">Avoiding Over-Analysis</li>
+                                <li id="about-growth-perfectionism">Managing Perfectionism</li>
                             </ul>
                         </div>
                     </section>
@@ -329,28 +342,28 @@
                     <section class="about-module about-languages" aria-labelledby="about-languages-title">
                         <h3 id="about-languages-title">Languages</h3>
                         <dl class="language-list">
-                            <div><dt>Portuguese</dt><dd>Native</dd></div>
-                            <div><dt>English</dt><dd>C1</dd></div>
-                            <div><dt>Spanish</dt><dd>B2</dd></div>
-                            <div><dt>German</dt><dd>A2 <span>→ B1</span></dd></div>
+                            <div><dt id="about-language-portuguese">Portuguese</dt><dd id="about-language-native">Native</dd></div>
+                            <div><dt id="about-language-english">English</dt><dd>C1</dd></div>
+                            <div><dt id="about-language-spanish">Spanish</dt><dd>B2</dd></div>
+                            <div><dt id="about-language-german">German</dt><dd>A2 <span>→ B1</span></dd></div>
                         </dl>
-                        <p class="language-note">Currently taking a German course to work toward B1 certification.</p>
+                        <p class="language-note" id="about-language-note">Currently taking a German course to work toward B1 certification.</p>
                     </section>
 
                     <section class="about-module about-interests" aria-labelledby="about-interests-title">
                         <h3 id="about-interests-title">Things I make time for</h3>
                         <ul class="interest-groups">
                             <li>
-                                <span class="interest-group-label">Explore</span>
-                                <span class="interest-group-items">Travelling · Learning Languages</span>
+                                <span class="interest-group-label" id="about-interest-explore">Explore</span>
+                                <span class="interest-group-items" id="about-interest-explore-items">Travelling · Learning Languages</span>
                             </li>
                             <li>
-                                <span class="interest-group-label">Activities</span>
-                                <span class="interest-group-items">Football Coaching · Outdoor Sports · Basketball · Motor Racing</span>
+                                <span class="interest-group-label" id="about-interest-activities">Activities</span>
+                                <span class="interest-group-items" id="about-interest-activities-items">Football Coaching · Outdoor Sports · Basketball · Motor Racing</span>
                             </li>
                             <li>
-                                <span class="interest-group-label">Unwind</span>
-                                <span class="interest-group-items">Music · Videogames · Cooking Desserts · Family &amp; Friends</span>
+                                <span class="interest-group-label" id="about-interest-unwind">Unwind</span>
+                                <span class="interest-group-items" id="about-interest-unwind-items">Music · Videogames · Cooking Desserts · Family &amp; Friends</span>
                             </li>
                         </ul>
                     </section>
@@ -696,14 +709,14 @@
                             2025<br>
                             uminho.pt<br>
                             Guimarães, Portugal
-                            <a class="document-link" href="documents/Diploma_IGPE_UM_EN.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open University of Minho diploma PDF">
+                            <a class="document-link" href="documents/Diploma_IGPE_UM_EN.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Universidade do Minho diploma PDF">
                                 Diploma
                             </a>
                         </div>
                         <div class="education-main">
                             <h3>Specialized Training</h3>
                             <p class="education-field">Engineering Project Management</p>
-                            <p class="education-institution">University of Minho</p>
+                            <p class="education-institution">Universidade do Minho</p>
                             <p class="education-detail">Specialized training in integrated engineering project management, with a focus on construction and information systems.</p>
                             <ul class="education-tags skill-tags" aria-label="Specialized training subject areas">
                                 <li>Project Planning, Monitoring &amp; Control</li>
@@ -963,7 +976,7 @@
     </footer>
 
 
-    <script src="script.js?v=20261006-back-to-top-mobile-clearance"></script>
+    <script src="script.js?v=20261012-about-de"></script>
 
 </body>
 
