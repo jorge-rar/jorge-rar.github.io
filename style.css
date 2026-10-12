@@ -3033,8 +3033,18 @@ footer {
     }
 
     .section.contact-section {
-        min-height: calc(100svh - 100px);
+        min-height: calc(100svh - 76px);
+        min-height: calc(100dvh - 76px);
         padding: 64px 25px 16px;
+        scroll-margin-top: 0;
+    }
+
+    .contact-section.chapter-divider::before {
+        top: 0;
+    }
+
+    .contact-section::after {
+        display: none;
     }
 
     .contact-message {
@@ -3212,20 +3222,11 @@ footer {
         position: relative;
     }
 
-    .education-exchange > .experience-date {
-        position: relative;
-        z-index: 1;
-        width: max-content;
-        max-width: 100%;
-        padding-right: 12px;
-        background: var(--background);
-    }
-
     .education-exchange::before {
         position: absolute;
         top: 25px;
         bottom: 25px;
-        left: 24px;
+        left: -8px;
         width: 1px;
         background: var(--orange);
         content: "";
@@ -3233,12 +3234,15 @@ footer {
     }
 
     .education-exchange .education-main > * {
-        margin-left: 48px;
+        width: 100%;
+        max-width: none;
+        margin-left: 0;
     }
 
     .education-exchange .education-main > .education-institution,
     .education-exchange .education-main > .education-detail {
-        width: calc(100% - 48px);
+        width: 100%;
+        max-width: none;
     }
 
     .education-item--experience-hierarchy .education-main h3 {
@@ -3298,8 +3302,10 @@ footer {
     }
 
     .section.contact-section {
-        min-height: calc(100svh - 100px);
+        min-height: calc(100svh - 76px);
+        min-height: calc(100dvh - 76px);
         padding: 48px 20px 12px;
+        scroll-margin-top: 0;
     }
 
     .contact-message {
