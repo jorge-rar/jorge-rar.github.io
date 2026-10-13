@@ -112,15 +112,19 @@ const siteTranslations = {
             title: "Berufserfahrung",
             physical: {
                 role: "Bauprojektleiter",
-                summary: "Ich leitete Bau- und Instandhaltungsprojekte für eine der am schnellsten wachsenden Fitnessstudioketten Portugals. Ich begleitete die Entwicklung von vier Fitnessstudios, von denen drei innerhalb von fünf Monaten eröffnet wurden. Ich koordinierte Budgets, Planung und Ausführung, damit Eröffnungstermine und Qualitätsstandards eingehalten wurden.",
+                summary: "Ich betreute Bau- und Instandhaltungsprojekte bei Physical und war an der Entwicklung von vier Fitnessstudios beteiligt, von denen drei innerhalb von fünf Monaten eröffneten. Ich koordinierte Budgets, Termine, Planung und Umsetzung im Hinblick auf die geplanten Eröffnungstermine.",
                 responsibilities: [
                     "Ich prüfte Architektur- und Fachplanungen in Tekla Structures, Revit und AutoCAD, um Projektanforderungen festzulegen und Einschränkungen zu erkennen.",
-                    "Ich definierte Arbeitspakete für Bau und Instandhaltung und teilte die Leistungsumfänge den jeweiligen Gewerken zu.",
-                    "Ich wählte Auftragnehmer und Lieferanten anhand der Projektanforderungen, ihrer Verfügbarkeit und der Rahmenbedingungen aus.",
-                    "Ich verwaltete Leistungsumfang, Termine und Budgets in MS Project und richtete sie an den geplanten Eröffnungsterminen der Fitnessstudios aus.",
-                    "Ich koordinierte Auftragnehmer und Fachgewerke, überwachte Fortschritt und Qualität und übergab die fertiggestellten Fitnessstudios zur Eröffnung."
+                    "Ich steuerte Leistungsumfang, Budgets und Termine in MS Project und richtete Meilensteine an den geplanten Eröffnungsterminen aus.",
+                    "Ich definierte Arbeitspakete und koordinierte Auftragnehmer, Lieferanten und Fachgewerke. Dabei überwachte ich Fortschritt und Qualität bis zur Übergabe."
                 ],
                 tags: ["Tekla Structures", "Autodesk Revit", "AutoCAD", "MS Project", "Bauzeiten- und Meilensteinplanung", "Bauqualitätskontrolle und Übergabe zur Eröffnung"]
+            },
+            gral: {
+                role: "U10-Fußball-Cheftrainer",
+                summary: "Als Cheftrainer der U10-Fußballmannschaft bei GRAL plante und leitete ich Trainingseinheiten zur technischen und taktischen Entwicklung der Spieler. Ich organisierte altersgerechte, abwechslungsreiche Aktivitäten und betreute die Teilnahme an Wettbewerben der AF Braga sowie an Freundschaftsturnieren. Mit EmJogo plante und dokumentierte ich Trainingseinheiten und Spiele, erfasste die Anwesenheit und hielt die Entwicklung der Spieler fest.",
+                tags: ["Trainingsplanung", "Technische und taktische Entwicklung", "Aktivitäten für Kinder", "Wettkampfbetreuung"],
+                tagsLabel: "Aufgabenbereiche"
             },
             study: {
                 title: "Studien- und Weiterbildungsphase",
@@ -128,10 +132,10 @@ const siteTranslations = {
             },
             bosch: {
                 role: "Produktionslinienleiter",
-                summary: "Ich leitete die tägliche Produktion an rund 12 Linien mit etwa 50 Mitarbeitenden bei Bosch Car Multimedia, einem Großserienhersteller von Automobilelektronik. Ich konzentrierte mich auf Produktionsziele, Qualität und Produktionskontinuität und trieb kontinuierliche Verbesserungen voran. Dadurch steigerte ich das OEE um <strong>etwa 5 Prozent</strong> und übertraf das Jahresziel von Bosch.",
+                summary: "Ich leitete die tägliche Produktion an rund 12 Linien mit etwa 50 Mitarbeitenden bei Bosch Car Multimedia und verfasste dort meine Masterarbeit zu Arbeitsmethoden für die Behebung von Nichtkonformitäten in der industriellen Produktion. Ich konzentrierte mich auf Produktionsziele, Qualität und Produktionskontinuität und trug zu kontinuierlichen Verbesserungen bei, durch die das OEE um etwa 5 Prozent stieg und das Jahresziel übertroffen wurde.",
                 responsibilities: [
+                    "Ich verfasste meine Masterarbeit bei Bosch zur Analyse und Entwicklung von Arbeitsmethoden für die Behebung von Nichtkonformitäten in der industriellen Produktion.",
                     "Ich nutzte MES und SAP MM/PP zur Produktionssteuerung und überwachte OEE, Durchsatz, Ausbeute und Stillstandszeiten mit Power BI.",
-                    "Im Rahmen einer kontinuierlichen Verbesserungsinitiative steigerte ich das OEE während meiner Tätigkeit von 2024 bis 2025 um <strong>etwa 5 Prozent</strong> und übertraf damit das Jahresziel von Bosch.",
                     "Ich senkte den Ausschussanteil am Umsatz um <strong>0,30 Prozentpunkte</strong> von 0,96 auf 0,66 Prozent. Damit lag der Wert 0,08 Prozentpunkte unter dem Bosch-Ziel von 0,74 Prozent.",
                     "Ich reduzierte die erfassten Ausschussursachenkategorien um <strong>33,7 Prozent</strong> von 83 auf 55.",
                     "Ich koordinierte tägliche Leistungsbesprechungen mit Instandhaltung, Produktionsplanung, Logistik, Engineering und Qualität.",
@@ -140,7 +144,7 @@ const siteTranslations = {
                     "Ich nutzte DMAIC und Pareto-Analysen, um Möglichkeiten zur Ausschussreduzierung zu priorisieren.",
                     "Ich führte regelmäßig 5-Why-Analysen mit Mitarbeitenden durch, um Verbesserungsmöglichkeiten für bestimmte Produktionslinien zu ermitteln."
                 ],
-                tags: ["MES (Manufacturing Execution Systems)", "SAP MM/PP", "Produktionskennzahlen", "Power BI", "Lean / 5S", "DMAIC, Pareto und 5 Why"]
+                tags: ["MES (Manufacturing Execution Systems)", "SAP MM/PP", "Produktionskennzahlen", "Power BI", "Lean / 5S", "DMAIC, Pareto und 5 Why", "Masterarbeit"]
             },
             bysteel: {
                 role: "Ingenieur für Produktion und Beschaffung",
@@ -166,7 +170,7 @@ const siteTranslations = {
                     "Ich entwickelte sechs Vorschläge zur Verpackungsneugestaltung mit geplanten jährlichen Einsparungen von rund <strong>90.000 Euro</strong>.",
                     "Ich berechnete geplante jährliche Einsparungen von <strong>5.000 Euro</strong> für eine Verpackungsreferenz."
                 ],
-                tags: ["MS Excel: Kostenmodellierung", "Pareto-Analyse", "Verpackungsdesign und Neugestaltung", "Wellpappenspezifikation", "Analyse der Palettenkonfiguration"]
+                tags: ["MS Excel: Kostenmodellierung", "Pareto-Analyse", "Verpackungsdesign und Neugestaltung", "Wellpappenspezifikation", "Analyse der Palettenkonfiguration", "Bachelorarbeit"]
             },
             recommendationLetter: "Empfehlungsschreiben",
             tagsLabels: {
@@ -296,6 +300,11 @@ const siteTranslations = {
                     ariaLabel: "C1 Advanced English Zertifikat als PDF öffnen"
                 },
                 {
+                    title: "UEFA-C-Diplom",
+                    description: "Portugiesische Trainerlizenz Fußball, Grad I",
+                    ariaLabel: "UEFA-C-Diplom als PDF öffnen"
+                },
+                {
                     title: "Mechanisches Design · SOLIDWORKS",
                     ariaLabel: "Zertifikat für Mechanical Design und SOLIDWORKS als PDF öffnen"
                 }
@@ -312,7 +321,6 @@ const siteTranslations = {
             socialProfiles: "Berufliche Profile",
             linkedin: "LinkedIn-Profil von Jorge Ribeiro öffnen",
             github: "GitHub-Profil von Jorge Ribeiro öffnen",
-            signatureAlt: "Handschriftliche Unterschrift von Jorge Ribeiro"
         },
         navigation: [
             "Über mich",
@@ -531,7 +539,6 @@ const contactDefaults = contactSection ? {
     socialLabel: contactSection.querySelector(".contact-social-links")?.getAttribute("aria-label"),
     socialLinks: [...contactSection.querySelectorAll(".contact-social-link")]
         .map((link) => link.getAttribute("aria-label")),
-    signatureAlt: contactSection.querySelector(".contact-signoff-signature")?.getAttribute("alt")
 } : null;
 
 function applyContactLanguage(contactTranslation) {
@@ -570,10 +577,6 @@ function applyContactLanguage(contactTranslation) {
         );
     });
 
-    const signature = contactSection.querySelector(".contact-signoff-signature");
-    if (signature) {
-        signature.setAttribute("alt", contactTranslation?.signatureAlt ?? contactDefaults.signatureAlt);
-    }
 }
 
 const experienceDefaults = experienceSection ? {
@@ -605,7 +608,7 @@ function applyExperienceLanguage(experienceTranslation) {
         const original = experienceDefaults.entries[index];
         if (!original) return;
 
-        const translationKey = ["physical", "study", "bosch", "bysteel", "ficosa"][index];
+        const translationKey = ["physical", "gral", "study", "bosch", "bysteel", "ficosa"][index];
         const translated = experienceTranslation?.[translationKey];
         const titleElement = entry.querySelector("h3");
         const roleElement = entry.querySelector(".experience-role");
