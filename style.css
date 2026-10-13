@@ -2803,6 +2803,16 @@ footer {
 
 @media (max-width: 900px) {
 
+    html {
+        scroll-padding-top: 76px;
+    }
+
+    main p:not(.experience-role):not(.education-field):not(.contact-phone-line),
+    .experience-responsibilities li {
+        text-align: justify;
+        hyphens: auto;
+    }
+
     .section-heading {
         font-size: clamp(34px, 7.4vw, 52px);
         line-height: 0.98;
@@ -3033,8 +3043,9 @@ footer {
     }
 
     .section.contact-section {
-        min-height: auto;
-        padding: 64px 25px 20px;
+        min-height: calc(100svh - 76px);
+        min-height: calc(100dvh - 76px);
+        padding: 64px 25px;
         scroll-margin-top: 0;
     }
 
@@ -3165,6 +3176,10 @@ footer {
 
     .experience-tags {
         order: 5;
+    }
+
+    .experience-item .experience-responsibility-panel--compact:not(.is-expanded) + .experience-tags {
+        margin-top: 10px;
     }
 
 
@@ -3301,8 +3316,9 @@ footer {
     }
 
     .section.contact-section {
-        min-height: auto;
-        padding: 48px 20px 16px;
+        min-height: calc(100svh - 76px);
+        min-height: calc(100dvh - 76px);
+        padding: 64px 20px;
         scroll-margin-top: 0;
     }
 
