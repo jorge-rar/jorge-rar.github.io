@@ -1133,20 +1133,54 @@ const siteLogo =
 
 const siteFooter =
     document.querySelector("footer");
+const backToTopCollisionTargets =
+    [...document.querySelectorAll("a, button")]
+        .filter((control) => control !== backToTopButton);
 
 if (backToTopButton && heroSection) {
     const updateBackToTop = () => {
         const hasLeftTop = window.scrollY > 0;
-        const mobileClearance = window.matchMedia("(max-width: 900px)").matches
-            ? 48
-            : 0;
+        const isMobile = window.matchMedia("(max-width: 900px)").matches;
         const footerOverlap = siteFooter
             ? Math.max(0, window.innerHeight - siteFooter.getBoundingClientRect().top)
             : 0;
+        const buttonHeight = backToTopButton.offsetHeight || 44;
+        let bottom = (isMobile ? 12 : 16) + footerOverlap;
+
+        if (isMobile) {
+            const buttonRight = window.innerWidth - 16;
+            const buttonLeft = buttonRight - (backToTopButton.offsetWidth || 44);
+            let buttonTop = window.innerHeight - bottom - buttonHeight;
+
+            let hasCollision = true;
+            let remainingChecks = backToTopCollisionTargets.length;
+
+            while (hasCollision && remainingChecks > 0) {
+                hasCollision = false;
+                remainingChecks -= 1;
+
+                for (const control of backToTopCollisionTargets) {
+                    const rect = control.getBoundingClientRect();
+                    if (
+                        rect.width <= 0
+                        || rect.height <= 0
+                        || rect.right <= buttonLeft
+                        || rect.left >= buttonRight
+                        || rect.bottom <= buttonTop
+                        || rect.top >= buttonTop + buttonHeight
+                    ) continue;
+
+                    buttonTop = Math.min(buttonTop, rect.top - buttonHeight - 12);
+                    hasCollision = true;
+                }
+            }
+
+            bottom = Math.max(bottom, window.innerHeight - buttonTop - buttonHeight);
+        }
 
         backToTopButton.classList.toggle("is-visible", hasLeftTop);
         backToTopButton.setAttribute("aria-hidden", String(!hasLeftTop));
-        backToTopButton.style.bottom = `${16 + footerOverlap + mobileClearance}px`;
+        backToTopButton.style.bottom = `${bottom}px`;
     };
 
     updateBackToTop();

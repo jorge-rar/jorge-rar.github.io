@@ -3033,9 +3033,8 @@ footer {
     }
 
     .section.contact-section {
-        min-height: calc(100svh - 76px);
-        min-height: calc(100dvh - 76px);
-        padding: 64px 25px 16px;
+        min-height: auto;
+        padding: 64px 25px 20px;
         scroll-margin-top: 0;
     }
 
@@ -3132,7 +3131,7 @@ footer {
         order: 3;
     }
 
-    .experience-summary-row {
+    html.has-experience-disclosures .experience-summary-row {
         display: flex;
         width: 100%;
         max-width: none;
@@ -3151,8 +3150,8 @@ footer {
         max-width: none;
     }
 
-    .experience-toggle {
-        align-self: flex-end;
+    html.has-experience-disclosures .experience-toggle {
+        align-self: flex-start;
     }
 
     .experience-summary,
@@ -3302,9 +3301,8 @@ footer {
     }
 
     .section.contact-section {
-        min-height: calc(100svh - 76px);
-        min-height: calc(100dvh - 76px);
-        padding: 48px 20px 12px;
+        min-height: auto;
+        padding: 48px 20px 16px;
         scroll-margin-top: 0;
     }
 
